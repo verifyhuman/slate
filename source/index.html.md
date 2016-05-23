@@ -1,12 +1,12 @@
 ---
 title: API Reference
 
-language_tabs:
+language\_tabs:
   - shell
   - ruby
   - python
 
-toc_footers:
+toc\_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
@@ -17,38 +17,38 @@ search: true
 ---
 
 # Introduction
-
+Test test test.
 Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
 We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+This example API documentation page was created with [Slate][1]. Feel free to edit it and use it as a base for your own API's documentation.
 
 # Authentication
 
 > To authorize, use this code:
 
-```ruby
+\`\`\`ruby
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
+\`\`\`
 
-```python
+\`\`\`python
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
-```
+\`\`\`
 
-```shell
+\`\`\`shell
 # With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
+curl "api\_endpoint\_here"
   -H "Authorization: meowmeowmeow"
-```
+\`\`\`
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal][2].
 
 Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
@@ -62,45 +62,45 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 ## Get All Kittens
 
-```ruby
+\`\`\`ruby
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.kittens.get
-```
+\`\`\`
 
-```python
+\`\`\`python
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
 api.kittens.get()
-```
+\`\`\`
 
-```shell
+\`\`\`shell
 curl "http://example.com/api/kittens"
   -H "Authorization: meowmeowmeow"
-```
+\`\`\`
 
 > The above command returns JSON structured like this:
 
-```json
+\`\`\`json
 [
   {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
+	"id": 1,
+	"name": "Fluffums",
+	"breed": "calico",
+	"fluffiness": 6,
+	"cuteness": 7
   },
   {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+	"id": 2,
+	"name": "Max",
+	"breed": "unknown",
+	"fluffiness": 5,
+	"cuteness": 10
   }
 ]
-```
+\`\`\`
 
 This endpoint retrieves all kittens.
 
@@ -111,8 +111,8 @@ This endpoint retrieves all kittens.
 ### Query Parameters
 
 Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
+\--------- | ------- | -----------
+include\_cats | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include kittens that have already been adopted.
 
 <aside class="success">
@@ -122,28 +122,28 @@ Remember — a happy kitten is an authenticated kitten!
 ## Get a Specific Kitten
 Oh, wait. No. Because why?
 
-```ruby
+\`\`\`ruby
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.kittens.get(2)
-```
+\`\`\`
 
-```python
+\`\`\`python
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
 api.kittens.get(2)
-```
+\`\`\`
 
-```shell
+\`\`\`shell
 curl "http://example.com/api/kittens/2"
   -H "Authorization: meowmeowmeow"
-```
+\`\`\`
 
 > The above command returns JSON structured like this:
 
-```json
+\`\`\`json
 {
   "id": 2,
   "name": "Max",
@@ -151,7 +151,7 @@ curl "http://example.com/api/kittens/2"
   "fluffiness": 5,
   "cuteness": 10
 }
-```
+\`\`\`
 
 This endpoint retrieves a specific kitten.
 
@@ -164,6 +164,8 @@ This endpoint retrieves a specific kitten.
 ### URL Parameters
 
 Parameter | Description
---------- | -----------
+\--------- | -----------
 ID | The ID of the kitten to retrieve
 
+[1]:	https://github.com/tripit/slate
+[2]:	http://example.com/developers
