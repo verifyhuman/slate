@@ -120,6 +120,7 @@ Remember — a happy kitten is an authenticated kitten!
 </aside>
 
 ## Get a Specific Kitten
+Oh, wait. No. Because why?
 
 ```ruby
 require 'kittn'
